@@ -3,7 +3,7 @@ Docker instalation for SandMarket project for Windows 10.
 ### Installation
 
 * mkdir SandMarket
-* git clone --recursive git@github.com:madonzy/sand-market-env-macos.git SandMarket
+* git clone --recursive git@github.com:madonzy/sand-market-env-win10.git SandMarket
 * cd SandMarket
 * sudo ./m2devbox-init.bat
 
