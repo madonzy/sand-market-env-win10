@@ -1,3 +1,6 @@
 [submodule "shared/webroot"]
 	path = shared/webroot
 	url = git@github.com:madonzy/sand-market.git
+[submodule "shared/sample-data"]
+	path = shared/sample-data
+	url = git@github.com:magento/magento2-sample-data.git
