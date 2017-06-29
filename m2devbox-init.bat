@@ -16,7 +16,6 @@ FOR /f "tokens=1,* delims=:" %%A IN ("%CMD_OUTPUT%") DO SET "WEB_PORT=%%B"
 ECHO Install Magento
 START m2devbox-unison-sync.bat 
 docker-compose exec --user magento2 web m2init magento:install --no-interaction --webserver-home-port=%WEB_PORT% 
-PAUSE
 
 FOR /F %%i in ('dir /b "./shared/sample-data\*.*"') do 
 (
@@ -41,3 +40,5 @@ FOR /F %%i in ('dir /b "./shared/sample-data\*.*"') do
 
 	GOTO :EOF
 )
+
+PAUSE
