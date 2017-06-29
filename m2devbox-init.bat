@@ -3,7 +3,7 @@ ECHO Build docker images
 docker-compose up --build -d
 
 ECHO Copy Webroot
-XCOPY ./shared/webroot\*.* magento2 /E /S /I
+XCOPY "./shared/webroot\*.*" "magento2" /E /S /I
 docker cp magento2 sand_market_box_web:/var/www
 docker exec -it sand_market_box_web chown -R magento2:magento2 /var/www/magento2
 RMDIR magento2 /S /Q
@@ -21,7 +21,7 @@ FOR /F %%i in ('dir /b "./shared/sample-data\*.*"') do
 (
 	ECHO Install Sample Data
 	ECHO Copy Sample Data modules
-	XCOPY ./shared/sample-data\*.* ./sample-data /E /S /I
+	XCOPY "./shared/sample-data\*.*" "./sample-data" /E /S /I
 	docker cp sample-data sand_market_box_web:/var/www
 	docker exec -it sand_market_box_web chown -R magento2:magento2 /var/www/magento2-sample-data
 	RMDIR sample-data /S /Q
