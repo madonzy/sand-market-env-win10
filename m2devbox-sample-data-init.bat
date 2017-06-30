@@ -23,6 +23,7 @@ IF %SAMPLE_DATA_FOLDER_EMPTY% == "false" do
 	TIMEOUT 5
 	
 	ECHO Reindexing and upgrading database (this can take a while)
+	docker-compose exec --user magento2 web php /home/magento2/magento2/bin/magento sampledata:reset
 	docker-compose exec --user magento2 web php /home/magento2/magento2/bin/magento setup:upgrade
 	docker-compose exec --user magento2 web rm -rf magento2/var
 	docker-compose exec --user magento2 web php /home/magento2/magento2/bin/magento indexer:reindex

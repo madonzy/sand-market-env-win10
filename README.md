@@ -1,26 +1,28 @@
 Docker instalation for SandMarket project for Windows 10.
 
-### Installation
+## Installation
+
+### Open PowerShell as Administrator!
 
 * mkdir SandMarket
 * git clone --recursive git@github.com:madonzy/sand-market-env-win10.git SandMarket
 * cd SandMarket
-* sudo ./m2devbox-init.bat
+* .\m2devbox-init.bat
+* .\m2devbox-sample-data-init.bat
 
-
-### Urls
+## Urls
 **Frontend**: http://127.0.0.1:32772/
 
 **Backend**: http://127.0.0.1:32772/admin/
 
-### Ports:
+## Ports:
 **HTTP**: 32772,
 
 **SSH**: 32776,
 
 **MySQL**: 32774
 
-### Access
+## Access
 **MySQL**: root:root
 
 **Admin panel**: admin:admin123
