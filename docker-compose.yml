@@ -12,6 +12,7 @@ services:
         volumes:
           - "~/.composer:/home/magento2/.composer"
           - "~/.ssh:/home/magento2/.ssh"
+          - "./shared/sample-data:/home/magento2/magento2-sample-data"
           - "./shared/logs/apache2:/var/log/apache2"
           - "./shared/logs/php-fpm:/var/log/php-fpm"
           - "./shared/.magento-cloud:/home/magento2/.magento-cloud"
